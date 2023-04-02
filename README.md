@@ -525,54 +525,54 @@ to_plt = to_plt.reset_index(level=1, drop=True).reset_index()
 #Exibindo o melhor e o pior campeão em cada Tier
 px.bar(to_plt,'Name' , 'Score' , 'Tier' ,hover_data=['Role' , 'Win %'], title='Melhor e pior campeão em cada Tier')
 ```
-output_6_1.png
+![png](images/output_6_1.png)
 
 ```python
 #Mostrando o gráfico com a distribuição das pontuações.
 px.histogram(df,'Score' , color='Name', title='Distribuição das pontuações')
 ```
-![images](output_7_0.png)
+![png](images/output_7_0.png)
 
 ```python
 #Exibindo o gráfico da distribuição das porcentagens de vitória.
 px.histogram(df, x='Win %', color='Name', title='Distribuição das porcentagens de vitória')
 ```
-![images](output_8_0.png)
+![png](images/output_8_0.png)
 
 ```python
 #Pick rate vs ban rate (primeiros 121 campeões)
 px.scatter(df, 'Pick %' , 'Ban %' ,'Name',title='Taxa de escolha vs taxa de banimento')
 ```
-![images](output_9_0.png)
+![png](images/output_9_0.png)
 
 ```python
 #Rotas com as taxas de vitória mais altas
 to_plt = df.groupby(['Role' ,'Win %' ,'Name']).size().sort_index(ascending = False).reset_index()
 px.bar(to_plt, 'Role','Win %','Name',width=650, height=1000, title='Rotas com as taxas de vitória mais altas')
 ```
-![images](output_10_0.png)
+![png](images/output_10_0.png)
 
 ```python
 #Estes são os campeões com as maiores pontuaçõe
 to_plt = df.groupby(['Score','Name','Role']).size().sort_index(ascending = False).reset_index()
 px.bar(to_plt, 'Name','Score','Role',width=2500, title='Campeões com as maiores pontuações')
 ```
-![images](output_11_0.png)
+![png](images/output_11_0.png)
 
 ```python
 #Estes são os campeões com alta taxa de vitória e baixa taxa de banimento
 px.scatter(df,'Win %' , 'Ban %' , 'Name' ,title='Campeões com alta taxa de vitória e baixa taxa de banimento')
 ```
-![images](output_12_0.png)
+![png](images/output_12_0.png)
 
 ```python
 #Campeões KDA (Abates, Mortes e Assistências) baixo e com alta taxa de vitória
 px.scatter(df,'KDA' , 'Win %' , 'Name',title='Campeões KDA baixo e com alta taxa de vitória')
 ```
-![images](output_13_0.png)
+![png](images/output_13_0.png)
 
 ```python
 #Campeões com alta taxa de escolha e baixa taxa de banimento
 px.scatter(df,'Pick %' , 'Ban %' , 'Name',title='Campeões com alta taxa de escolha e baixa taxa de banimento')
 ```
-![images](output_14_0.png)
+![png](images/output_14_0.png)
