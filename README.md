@@ -1,32 +1,29 @@
-# League-Of-Legends-S13.3-Basic-EDA
+# League Of Legends S13.3 EDA
 
 ## Sobre o Dataset:
-## Dataset from: [kaggle](https://www.kaggle.com/datasets/vivovinco/league-of-legends-stats-s13)
 
-Este dataset contém estatísticas de campeões de jogos ranqueados de League of Legends..
+### Dataset: [kaggle](https://www.kaggle.com/datasets/vivovinco/league-of-legends-stats-s13)
+
+Este dataset contém estatísticas de cada campeão das partidas ranqueados de League of Legends.
 
 ### Contém:
 
-+100 linhas e 11 colunas
+162 linhas e 11 colunas.
 
 A descrição das colunas está listada abaixo:
 
-- Name : Nome do campeão
-- Class : Lutador, Assassino, Mago, Atirador, Suporte ou Tanque
-- Role : Top, Meio, ADC, Suporte ou Selva
-- Tier : God, S, A, B, C ou D
-- Score : Pontuação geral do campeão
-- Trend : Tendência da pontuação
-- Win % : Taxa de vitórias do campeão
-- Role % : Taxa de papel desempenhado com o campeão
-- Pick % : axa de escolha do campeão
-- Ban % : Taxa de banimento do campeão
-- KDA : Abates, Mortes e Assistência relacionado ao campeão
-
-### Acknowledgements
-
-Data from METAsrc: https://www.metasrc.com/5v5/stats
-
+- Name: Nome do campeão
+- Class: Lutador, Assassino, Mago, Atirador, Suporte ou Tanque
+- Role: Top, Meio, ADC, Suporte ou Selva
+- Tier: God, S, A, B, C ou D
+- Score: Pontuação geral do campeão
+- Trend: Tendência da pontuação
+- Win %: Taxa de vitórias do campeão
+- Role %: Taxa de papel desempenhado com o campeão
+- Pick %: axa de escolha do campeão
+- Ban %: Taxa de banimento do campeão
+- KDA: Abates, Mortes e Assistência relacionado ao campeão
+#
 ```python
 import numpy as np 
 import pandas as pd
@@ -567,7 +564,7 @@ px.histogram(df, x='Win %', color='Name', title='Distribuição das porcentagens
 ![png](images/output_8_0.png)
 
 ```python
-#Pick rate vs ban rate (primeiros 121 campeões)
+#Taxa de escolha vs taxa de banimento
 px.scatter(df, 'Pick %' , 'Ban %' ,'Name',title='Taxa de escolha vs taxa de banimento')
 ```
 ![png](images/output_9_0.png)
