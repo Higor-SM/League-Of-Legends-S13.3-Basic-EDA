@@ -4,7 +4,7 @@
 
 ### Dataset: [kaggle](https://www.kaggle.com/datasets/vivovinco/league-of-legends-stats-s13)
 
-Este dataset contém estatísticas de cada campeão das partidas ranqueados de League of Legends.
+Este dataset contém estatísticas de cada campeão das partidas ranqueadas de League of Legends.
 
 ### Contém:
 
